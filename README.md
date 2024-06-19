@@ -29,3 +29,20 @@ You do *not* need to set up a database or any interactivity on the webpage yet. 
 ## update README 
 
 Just some update on the README
+
+## Docker cmd
+
+Build binary
+```bash
+./scripts/buildprod.sh
+``` 
+
+Build docker image
+```bash
+docker build -t emmaqu/notely:latest .
+``` 
+
+Run docker image
+```bash
+docker run -e PORT=8080 -p 8080:8080 emmaqu/notely:latest
+``` 
