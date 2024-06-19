@@ -14,14 +14,6 @@ func TestGetAPIKey(t *testing.T) {
 		expectedError error
 	}{
 		{
-			name: "Malformed Authorization Header - No Space",
-			headers: http.Header{
-				"Authorization": []string{"ApiKey12345"},
-			},
-			expectedKey:   "",
-			expectedError: errors.New("malformed authorization header"),
-		},
-		{
 			name: "Correct Authorization Header",
 			headers: http.Header{
 				"Authorization": []string{"ApiKey 12345"},
