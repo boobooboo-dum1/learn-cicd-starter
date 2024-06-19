@@ -46,3 +46,9 @@ Run docker image
 ```bash
 docker run -e PORT=8080 -p 8080:8080 emmaqu/notely:latest
 ``` 
+
+## Send to GCP Artifact Registry
+
+```bash
+gcloud builds submit --tag us-central1-docker.pkg.dev/notely-426920/notely-ar-repo/notely:latest .
+``` 
